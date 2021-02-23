@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: postgres
+  host: localhost
+
+
+development:
+  <<: *default
+  database: shared_idea_development
+
+test:
+  <<: *default
+  database: shared_idea_test
+
+production:
+  <<: *default
+  database: shared_idea_production
+  username: shared_idea
+  password: <%= ENV['SHARED_IDEA_DATABASE_PASSWORD'] %>
