@@ -39,23 +39,22 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <%= link_to  admins_backoffice_welcome_index_path, class: "nav-link" do %>
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                <% end %>
             </li>
 
 
             <!-- Divider -->
             <hr class="sidebar-divider">
              <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <%= link_to admins_backoffice_admins_index_path,class: "nav-link" do %>
                     <i class="fas fa-users fa-tachometer-alt"></i>
-                    <span>Administradores</span></a>
+                    <span>Administradores</span>
+                <% end %>
             </li>
-
-
             <!-- Heading -->
             <div class="sidebar-heading">
                 Interface
