@@ -54,6 +54,7 @@ group :development do
   gem 'tty-spinner'
   gem 'faker'
   gem 'awesome_print'
+  gem 'pry'
 end
 
 group :test do
