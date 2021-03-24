@@ -6,8 +6,21 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     @admins = Admin.all
   end
 
-  def edit
+  def new
+    @admin = Admin.new
   end
+
+  def create
+    @admin = Admin.new(admin_params)
+    if @admin.save
+      redirect_to admins_backoffice_admins_path, notice: "Administrador criado com sucesso!"
+    else
+      render :new
+    end
+  end
+
+
+  def edit;end
 
   def update
     if @admin.update(admin_params)

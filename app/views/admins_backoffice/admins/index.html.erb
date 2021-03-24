@@ -2,9 +2,13 @@
 <table class="table">
   <thead class="thead-light">
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Email</th>
-      <th><th>
+      <th >ID</th>
+      <th >Email</th>
+      <th class="td-actions text-right">
+         <%= link_to new_admins_backoffice_admin_path, class: "btn btn-primary btn-just-icon btn-sm" do %>
+           <i class="fa fa-plus"></i>
+        <% end %>
+      <th>
     </tr>
   </thead>
   <tbody>
