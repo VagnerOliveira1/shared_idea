@@ -1,6 +1,8 @@
 namespace :dev do
 
   DEFAULT_PASSWORD = "12345678"
+  DEFAULT_FILES_PATH = File.join(Rails.root, 'lib', 'tmp')
+
   task setup: :environment do
     if Rails.env.development?
       show_spinner("Apagando o DB...") {  %x(rails db:drop) }
@@ -9,6 +11,7 @@ namespace :dev do
       show_spinner("Cadastrando o Admin Padrão...") { %x(rails dev:add_default_admin) }
       show_spinner("Cadastrando outros Admins...") { %x(rails dev:add_others_admins) }
       show_spinner("Cadastrando o User Padrão...") { %x(rails dev:add_default_user) }
+      show_spinner("Cadastrando Assuntos Padrões...") { %x(rails dev:subjects) }
     else
       puts "Você não está em ambiente de desenvolvimento"
     end
@@ -43,6 +46,15 @@ namespace :dev do
     )
   end
 
+  desc " Adiciona Assuntos Padrões"
+  task subjects: :environment do
+    file_name = 'subjects.txt'
+    file_path = File.join(DEFAULT_FILES_PATH, file_name)
+
+    File.open(file_path, 'r').each do |line|
+      Subject.create!(description: line.strip)
+    end
+  end
 
   private
 
