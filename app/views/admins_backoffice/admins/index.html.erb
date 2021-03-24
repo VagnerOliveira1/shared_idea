@@ -1,32 +1,39 @@
-<h1>Administradores</h1>
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th >ID</th>
-      <th >Email</th>
-      <th class="td-actions text-right">
-         <%= link_to new_admins_backoffice_admin_path, class: "btn btn-primary btn-just-icon btn-sm" do %>
-           <i class="fa fa-plus"></i>
-        <% end %>
-      <th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @admins.each do  |admin|%>
-    <tr>
-      <td> <%= admin.id %></td>
-      <td> <%= admin.email %></td>
-      <td class="td-actions text-right">
+  <div class= "container">
+  <h1>Administradores</h1>
 
-        <%= link_to edit_admins_backoffice_admin_path(admin), class: "btn btn-success btn-just-icon btn-sm" do %>
-           <i class="fa fa-edit"></i>
-        <% end %>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th >ID</th>
+          <th >Email</th>
+          <th class="td-actions text-right">
+            <%= link_to new_admins_backoffice_admin_path, class: "btn btn-primary btn-just-icon btn-sm" do %>
+              <i class="fa fa-plus"></i>
+            <% end %>
+          <th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @admins.each do  |admin|%>
+        <tr>
+          <td> <%= admin.id %></td>
+          <td> <%= admin.email %></td>
+          <td class="td-actions text-right">
 
-        <%= link_to admins_backoffice_admin_path(admin), class:"btn btn-danger btn-just-icon btn-sm", method: :delete, :confirm => "Vai Excluir ?" do %>
-            <i class="fa fa-trash"></i>
-        <% end %>
-    </td>
-    </tr>
-  <%end%>
-  </tbody>
-</table>
+            <%= link_to edit_admins_backoffice_admin_path(admin), class: "btn btn-success btn-just-icon btn-sm" do %>
+              <i class="fa fa-edit"></i>
+            <% end %>
+
+            <%= link_to admins_backoffice_admin_path(admin), class:"btn btn-danger btn-just-icon btn-sm", method: :delete, :confirm => "Vai Excluir ?" do %>
+                <i class="fa fa-trash"></i>
+            <% end %>
+        </td>
+        </tr>
+      <%end%>
+      </tbody>
+    </table>
+
+</div>
+<div class="pagination justify-content-center">
+      <%= paginate @admins %>
+</div>
