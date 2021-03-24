@@ -4,3 +4,5 @@
 
 //= require fastclick/lib/fastclick
 //= require custom
+//= require jquery
+//= require jquery_ujs

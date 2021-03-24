@@ -4,6 +4,8 @@
 
  //= require jquery/src/jquery
  //= require sb-admin-2
+//= require jquery
+//= require jquery_ujs
 #  <!-- jQuery JavaScript Library v3.5.1 -->
 #     <script src="vendor/jquery/jquery.min.js"></script>
 

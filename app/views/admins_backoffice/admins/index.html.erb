@@ -22,9 +22,9 @@
            <i class="fa fa-edit"></i>
         <% end %>
 
-        <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" data-original-title="" title="">
+        <%= link_to admins_backoffice_admin_path(admin), class:"btn btn-danger btn-just-icon btn-sm", method: :delete, :confirm => "Vai Excluir ?" do %>
             <i class="fa fa-trash"></i>
-        </button>
+        <% end %>
     </td>
     </tr>
   <%end%>
