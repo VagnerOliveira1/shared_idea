@@ -3,7 +3,7 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
   before_action :subjects_all, only: [:new, :edit]
 
   def index
-    @questions = Question.all.page(params[:page])
+    @questions = Question.includes(:subject).order(:content).page(params[:page])
   end
 
   def new
