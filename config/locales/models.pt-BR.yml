@@ -10,6 +10,9 @@
       subject:
         one: Assunto
         other: Assuntos
+      question:
+        one: Questão
+        other: Questões
     attributes:
       admin:
         email: Email
@@ -25,3 +28,5 @@
         updated_at: Atualizado em
       subject:
         description: Descrição
+      question:
+        content: Conteúdo
