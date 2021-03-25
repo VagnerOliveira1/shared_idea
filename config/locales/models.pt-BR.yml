@@ -7,6 +7,9 @@
       admin:
         one: Administrador
         other: Administradores
+      subject:
+        one: Assunto
+        other: Assuntos
     attributes:
       admin:
         email: Email
@@ -20,3 +23,5 @@
         password_confirmation: Confimação de Senha
         created_at: Criado em
         updated_at: Atualizado em
+      subject:
+        description: Descrição

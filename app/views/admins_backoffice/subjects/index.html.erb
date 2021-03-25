@@ -1,2 +1,39 @@
-<h1>AdminsBackoffice::Subjects#index</h1>
-<p>Find me in app/views/admins_backoffice/subjects/index.html.erb</p>
+  <div class= "container">
+  <h1>Assuntos</h1>
+
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th >ID</th>
+          <th >Descrição</th>
+          <th class="td-actions text-right">
+            <%= link_to new_admins_backoffice_subject_path, class: "btn btn-primary btn-just-icon btn-sm" do %>
+              <i class="fa fa-plus"></i>
+            <% end %>
+          <th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @subjects.each do  |subject|%>
+        <tr>
+          <td> <%= subject.id %></td>
+          <td> <%= subject.description %></td>
+          <td class="td-actions text-right">
+
+            <%= link_to edit_admins_backoffice_subject_path(subject), class: "btn btn-success btn-just-icon btn-sm" do %>
+              <i class="fa fa-edit"></i>
+            <% end %>
+
+            <%= link_to admins_backoffice_subject_path(subject), class:"btn btn-danger btn-just-icon btn-sm", method: :delete, :confirm => "Vai Excluir ?" do %>
+                <i class="fa fa-trash"></i>
+            <% end %>
+        </td>
+        </tr>
+      <%end%>
+      </tbody>
+    </table>
+
+</div>
+<div class="pagination justify-content-center">
+      <%= paginate @subjects %>
+</div>
