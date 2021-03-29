@@ -50,7 +50,7 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
   end
 
   def subjects_all
-    Subject.all.order(:description)
+    @subjects = Subject.all.order(:description)
   end
 
 end

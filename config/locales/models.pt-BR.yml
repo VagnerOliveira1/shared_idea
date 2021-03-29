@@ -15,18 +15,28 @@
         other: Questões
     attributes:
       admin:
+        id: Código
         email: Email
         password: Senha
         password_confirmation: Confimação de Senha
         created_at: Criado em
         updated_at: Atualizado em
       user:
+        id: Código
         email: Email
         password: Senha
         password_confirmation: Confimação de Senha
         created_at: Criado em
         updated_at: Atualizado em
       subject:
+        id: Código
         description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
       question:
+        id: Código
         content: Conteúdo
+        subject: Assunto
+        created_at: Criada em
+        updated_at: Atualizada em
+

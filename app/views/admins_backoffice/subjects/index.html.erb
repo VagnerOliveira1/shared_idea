@@ -4,8 +4,8 @@
     <table class="table">
       <thead class="thead-light">
         <tr>
-          <th >ID</th>
-          <th >Descrição</th>
+          <th ><%= translate_attribute(@subjects, :id)%></th>
+          <th ><%= translate_attribute(@subjects, :description)%></th>
           <th class="td-actions text-right">
             <%= link_to new_admins_backoffice_subject_path, class: "btn btn-primary btn-just-icon btn-sm" do %>
               <i class="fa fa-plus"></i>
