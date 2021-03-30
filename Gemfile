@@ -58,6 +58,7 @@ group :development do
   gem 'faker'
   gem 'awesome_print'
   gem 'pry'
+
 end
 
 group :test do
